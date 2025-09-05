@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive webpage demonstrating Flexbox, CSS Grid, and media queries for modern web layouts.">
+    <meta name="keywords" content="CSS, responsive design, Flexbox, Grid, web layout, media queries, HTML5">
+    <title>Responsive Layout Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Responsive Web Design</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <main>
+            <section class="main-content">
+                <h2>Introduction to CSS Layouts</h2>
+                <p>This page uses modern CSS techniques to create a flexible and responsive layout. On smaller screens, the content stacks vertically. As the screen size increases, the layout adapts to show multiple columns.</p>
+                <p>The navigation bar above uses <strong>Flexbox</strong> to align its items, and the main content area with the sidebar uses <strong>CSS Grid</strong> to control its structure. This demonstrates the combined power of both layout models for different use cases.</p>
+                
+                <h3>Recent Posts</h3>
+                <div class="card-container">
+                    <div class="card">
+                        <h4>Flexbox Basics</h4>
+                        <p>Learn how to create one-dimensional layouts with Flexbox for rows or columns.</p>
+                    </div>
+                    <div class="card">
+                        <h4>CSS Grid in a Nutshell</h4>
+                        <p>Master two-dimensional layouts and create complex page structures with Grid.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Responsive Media Queries</h4>
+                        <p>Discover how to apply different styles based on a device's screen size.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            <h2>Sidebar</h2>
+            <p>This sidebar contains supplementary information and is part of the main page layout. It will appear next to the main content on larger screens thanks to CSS Grid.</p>
+            <ul>
+                <li>Quick Links</li>
+                <li>More Info</li>
+                <li>Archives</li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Responsive Layouts. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

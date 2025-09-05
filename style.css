@@ -1,0 +1,130 @@
+/* style.css - Responsive Web Design Assignment */
+
+/* --- General & Mobile-First Styles --- */
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #0056b3;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1, h2, h3, h4 {
+    color: #2c3e50;
+}
+
+/* --- Flexbox for Navigation --- */
+/* The nav is a perfect use case for Flexbox (a one-dimensional layout) */
+
+nav {
+    background-color: #34495e;
+    padding: 0.5em 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Makes the list items a flexible row */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    justify-content: center; /* Centers items horizontally */
+    gap: 1em; /* Adds space between items */
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    display: block;
+}
+
+/* --- Card Container with Flexbox --- */
+
+.card-container {
+    display: flex;
+    flex-direction: column; /* Stack cards vertically on small screens */
+    gap: 1.5em; /* Spacing between cards */
+}
+
+.card {
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Main Layout with CSS Grid --- */
+/* Mobile-first: Grid is not needed, the layout is naturally a single column */
+
+.container {
+    padding: 1em;
+}
+
+main {
+    margin-bottom: 2em; /* Space below the main content on mobile */
+}
+
+aside {
+    background-color: #e6e6e6;
+    padding: 1.5em;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #34495e;
+    color: #fff;
+    margin-top: 2em;
+}
+
+/* --- Responsive Layout using Media Queries --- */
+
+/* Tablet Layout (Flexbox & Grid) */
+@media (min-width: 768px) {
+    
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* Creates a two-column layout */
+        gap: 2em; /* Adds a gutter between columns */
+    }
+
+    /* Adjust main and aside margins since they are now in a grid */
+    main, aside {
+        margin-bottom: 0;
+    }
+
+    .card-container {
+        flex-direction: row; /* Changes cards to a horizontal layout */
+        flex-wrap: wrap;
+    }
+}
+
+/* Desktop Layout */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto; /* Center the container on large screens */
+    }
+
+    nav ul {
+        justify-content: flex-start; /* Align nav items to the left */
+    }
+
+    .card-container {
+        justify-content: space-between;
+    }
+
+    .card {
+        flex: 1; /* Makes cards grow equally within their container */
+    }
+}
